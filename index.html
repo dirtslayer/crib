@@ -20,12 +20,12 @@ let app = new Application({
     resolution: 1,
     antialias: false,
     forceFXAA: false,
-    forceCanvas: false,
+    forceCanvas: true,
     autoResize: true,
     transparent: false,
     backgroundColor: 0x000000,
     clearBeforeRender: true,
-    preserveDrawingBuffer: false,
+    preserveDrawingBuffer: true,
     roundPixels: false
   }
 );
@@ -137,7 +137,9 @@ if ( ace_of_clubs.vy > 0) {
         ace_of_clubs.y += ace_of_clubs.vy;
     }
 }
-  t.update();
+ t.update();
+  // app.stage.update();
+  // app.view.update();
 
 
 //Optionally, you probably also want to render your root Pixi
